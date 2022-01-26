@@ -1,46 +1,51 @@
 import {Request} from 'https://deno.land/x/request@1.3.2/mod.ts'
-//import {readJson, readJsonSync, writeJson, writeJsonSync} from 'https://deno.land/x/jsonfile/mod.ts'
 import loadJsonFile from 'https://deno.land/x/load_json_file@v1.0.0/mod.ts'
-
+import { round } from "https://deno.land/x/math@v1.1.0/mod.ts";
+import {API_KEY} from './api_key.ts'
 
 class ExchangeData {
-    api_key:string;
+    req_api_key:string;
     exData:any;
 
-    constructor(access_key: string) {
-        this.api_key = "http://data.fixer.io/api/latest?access_key=123456789"
+    constructor(api_access_key: string) {
+        console.log("###########################################################################");
+        this.req_api_key = "YOUR PRIVATE API ACCESS KEY FOR API REQUEST: http://data.fixer.io/api/latest?access_key="+api_access_key
+        console.log(this.req_api_key)
+        console.log("###########################################################################");
     }
 
     async get_data(){
-        this.exData = await loadJsonFile("./data.json");
+        this.exData = await loadJsonFile("./src/data.json");
     }
 
-    get_convert(quantity:number, curr_from:string, curr_to:string) {
+    async get_convert(quantity:number, curr_from:string, curr_to:string) {
         return this.get_data().then(()=>{
-            return this.exData.rates[curr_to]})
+            return round(quantity*(1/this.exData.rates[curr_from])*this.exData.rates[curr_to], 2)})
     }
 
 }
-const data = new ExchangeData("123456789")
-console.log(await data.get_convert(20, "USD", "EUR"))
+// ENTER THE PERSONAL ACCESS KEY DIRECTLY HERE
+//const data = new ExchangeData("928d9df316f02c8475d137a189d97112")
+
+const api_key = new API_KEY("928d9df316f02c8475d137a189d97112")
+console.log(api_key);
+
+
+
+
+//const data = await Request.get('ENTER YOUR API KEY HERE')
 
 
 
 
 
+//console.log("Result: "+ await data.get_convert(1, "GBP", "UYU"))
+//console.log(data)
+//console.log(data.exData.timestamp)
 
-//const result:any = await readJsonSync("./data.json");
-//console.log(result.rates["EUR"]);
-// Enter your private api access key as string HERE!
-//const api_key = new API("")
-//const api_key = new API("YOUR PRIVATE API KEY COMES HERE!")
-//console.log("YOUR private API KEY: \n"+api_key.get_api_key());
-//console.log("###########################################################################");
-//const data = await Request.get(api_key.get_api_key());
-//console.log(data);
+
+
 //writeJsonSync('data.json', data)
 
-
-//console.log(api_key.get_data())
 
 
