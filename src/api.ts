@@ -22,7 +22,7 @@ class ExchangeData {
 
 }
 const data = new ExchangeData("123456789")
-console.log(await data.get_convert(20, "USD", "EUR"))
+console.log(data.get_convert(20, "USD", "EUR"))
 
 
 
