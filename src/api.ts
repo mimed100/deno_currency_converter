@@ -16,13 +16,13 @@ class ExchangeData {
     }
 
     get_convert(quantity:number, curr_from:string, curr_to:string) {
-        return this.get_data()
-            return this.exData.rates[curr_to]
+        return this.get_data().then(()=>{
+            return this.exData.rates[curr_to]})
     }
 
 }
 const data = new ExchangeData("123456789")
-console.log(data.get_convert(20, "USD", "EUR"))
+console.log(await data.get_convert(20, "USD", "EUR"))
 
 
 
