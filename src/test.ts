@@ -2,12 +2,18 @@ import {readJson, readJsonSync, writeJson, writeJsonSync} from 'https://deno.lan
 
 export class LoadJSON {
     public static async get_data(){
-        const data:any = await readJsonSync("./data.json");
-        console.log(typeof data)
+        //const data:any = await readJsonSync("./data.json");
+        //console.log(typeof data)
         //console.log(data.rates)
-        return data
+        //return data
     }
 }
 
-const x = LoadJSON.get_data();
-console.log(x)
+//const x = LoadJSON.get_data();
+//console.log(x)
+
+
+
+const text = JSON.parse(await Deno.readTextFile('data.json'))
+console.log(text.rates.EUR)
+console.log(typeof text)

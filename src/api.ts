@@ -1,5 +1,6 @@
 import {Request} from 'https://deno.land/x/request@1.3.2/mod.ts'
-import {readJson, readJsonSync, writeJson, writeJsonSync} from 'https://deno.land/x/jsonfile/mod.ts'
+//import {readJson, readJsonSync, writeJson, writeJsonSync} from 'https://deno.land/x/jsonfile/mod.ts'
+import loadJsonFile from 'https://deno.land/x/load_json_file@v1.0.0/mod.ts'
 
 class API {
     api_key:string;
@@ -11,12 +12,12 @@ class API {
     }
     // Suuupiiiii
     async get_data(){
-        this.data = await readJsonSync("./data.json");
+        this.data = await loadJsonFile("./data.json");
         
         // Klappt
         console.log(this.data.rates["USD"]);
         console.log(typeof this.data.rates["USD"]);
-        return this.data
+        
         //const data_new = data.rates;
         //console.log(data_new);
     }
@@ -36,8 +37,12 @@ const api_key = new API("YOUR PRIVATE API KEY COMES HERE!")
 console.log(api_key.get_convert(20, "USD", "EUR"))
 
 
-const result:any = await readJsonSync("./data.json");
-console.log(result.rates["EUR"]);
+
+
+
+
+//const result:any = await readJsonSync("./data.json");
+//console.log(result.rates["EUR"]);
 
 
 
