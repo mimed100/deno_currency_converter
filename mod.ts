@@ -3,8 +3,8 @@ import {readJson, readJsonSync, writeJson, writeJsonSync} from 'https://deno.lan
 import {API} from './src/api.ts'
 
 // Enter your private api access key as string HERE!
-const api_key = new API("928d9df316f02c8475d137a189d97112")
-//const api_key = new API("YOUR PRIVATE API KEY COMES HERE!")
+//const api_key = new API("")
+const api_key = new API("YOUR PRIVATE API KEY COMES HERE!")
 
 console.log("YOUR private API KEY: \n"+api_key.get_api_key());
 console.log("###########################################################################");
