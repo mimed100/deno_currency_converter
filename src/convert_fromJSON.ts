@@ -9,8 +9,8 @@ export class FiatConverter_fromJSON {
     async convert(quantity:number, curr_from:string, curr_to:string) {
         return this.get_data().then(
             ()=>{
-                const result = round(quantity*(1/this.data.rates[curr_from])*this.data.rates[curr_to])
-            return result
+                const result = quantity*(1/this.data.rates[curr_from])*this.data.rates[curr_to]
+            return round(result)
             }
         )
     }
