@@ -7,7 +7,7 @@ There are two different modes for this module
 ### 1) Convert Currency with Realtime Data from fixer.io (API-Key required: https://fixer.io/)
 ##### Step 1) Import and create a new class
 ```js
-import {FiatConverter_fromAPI} from 'https://deno.land/x/currency_converter@v0.6.0/api_mod.ts'
+import {FiatConverter_fromAPI} from 'https://deno.land/x/currency_converter@v0.7.0/api_mod.ts'
 let FiatConverter = new FiatConverter_fromAPI()
 ```
 
@@ -22,6 +22,11 @@ var result = await FiatConverter.convert("YOUR_API_ACCESS_KEY",15,"EUR","RUB")
 console.log(result)
 ```
 
+##### Step 3) Run the module
+```js
+deno run --allow-net  test.ts
+```
+
 Fixer.io offers 100 free API request calls per month! 
 Create your fixer.io API_Key now and calculate currencies in Realtime for free with this deno module!
 Link: https://fixer.io/
@@ -31,7 +36,7 @@ Link: https://fixer.io/
 ### 2) Convert Currency with Saved Data from .json file
 ##### Step 1) Import and create a new class
 ```js
-import {FiatConverter_fromJSON} from 'https://deno.land/x/currency_converter@v0.6.0/json_mod.ts'
+import {FiatConverter_fromJSON} from 'https://deno.land/x/currency_converter@v0.7.0/json_mod.ts'
 let FiatConverter = new FiatConverter_fromJSON()
 ```
 
@@ -45,8 +50,7 @@ var result = await FiatConverter.convert(15,"EUR","RUB")
 console.log(result)
 ```
 
-
-##### Original versioning repository
-Link: https://github.com/mimed100/deno_currency_converter
-Unfortunetly the free fixer.io api key does not support changing base currency directly by request...
-
+##### Step 3) Run the module
+```js
+deno run --allow-net --allow-read  test.ts
+```
