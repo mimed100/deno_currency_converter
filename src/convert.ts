@@ -11,8 +11,8 @@ export class FiatConverter {
     async get_convert(quantity:number, curr_from:string, curr_to:string) {
         return this.get_data().then(()=>{
             return round(quantity*(1/this.convData.rates[curr_from])*this.convData.rates[curr_to], 2)})
+            
     }
 }
 
-let result = new FiatConverter()
-console.log("Result: "+ await result.get_convert(1, "USD", "EUR"))
+console.log("RESULT: "+await new FiatConverter().get_convert(1, "EUR", "USD"))
