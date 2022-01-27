@@ -12,10 +12,10 @@ let FiatConverter = new FiatConverter_fromAPI()
 ```
 
 ##### Step 2) Call the convert() method on created object
-The convert() method receives four inputs: 
-    arg0: Your fixer.io api access key as string
-    arg1: The amount that should be converted into the new fiat currency
-    arg2: The inital currency for conversion ["EUR" -->] (ISO 3-Letter Currency Code)
+The convert() method receives four inputs:<br /> 
+    arg0: Your fixer.io api access key as string<br />
+    arg1: The amount that should be converted into the new fiat currency<br />
+    arg2: The inital currency for conversion ["EUR" -->] (ISO 3-Letter Currency Code)<br />
     arg2: The target currency [--> "USD"] (ISO 3-Letter Currency Code)
 ```js
 var result = await FiatConverter.convert("YOUR_API_ACCESS_KEY",15,"EUR","RUB")
