@@ -28,7 +28,7 @@ class ExchangeData {
 //const data = new ExchangeData("928d9df316f02c8475d137a189d97112")
 
 const api_key = new API_KEY("928d9df316f02c8475d137a189d97112")
-console.log(api_key);
+//console.log(api_key);
 
 
 
