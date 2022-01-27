@@ -6,7 +6,7 @@ export class FiatConverter_fromJSON {
     async get_data(){
         this.data = await loadJsonFile("./data.json");
     }
-    async get_convert(quantity:number, curr_from:string, curr_to:string) {
+    async convert(quantity:number, curr_from:string, curr_to:string) {
         return this.get_data().then(
             ()=>{
                 const result = round(quantity*(1/this.data.rates[curr_from])*this.data.rates[curr_to])
