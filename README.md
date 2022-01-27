@@ -1,15 +1,24 @@
-# deno_currency_converter
-Deno module to convert fiat currencies with fetched API from fixer.io
+# Currency_converter
+Deno module to convert fiat currencies with initial fetched API from fixer.io
 
-## Step 1
-Create an account at https://fixer.io/ to generate a free API Access key. 
-Fixer.io offers up to 100 API requests per month for free.
+## Usage example
+There are two different modes for this module
 
-## Step 2
-Copy the fixer.io private API access key from your account and paste it into the mod.ts module as String instead of 
-YOUR PRIVATE API KEY COMES HERE!
+### 1) Convert Currency with Realtime Data
+```js
+CODEBLOCK WILL FOLLOW
+```
 
-## Step 3
-Run the mod.ts in the command line via:
+### 1) Convert Currency with Saved Data from .json file
+```js
+CODEBLOCK WILL FOLLOW
+```
 
-deno run --allow-net --allow-read --allow-write
+## Get private API key from fixer.io
+
+
+
+##### Original versioning repository
+Link: https://github.com/mimed100/deno_currency_converter
+Unfortunetly the free fixer.io api key does not support changing base currency directly by request...
+
