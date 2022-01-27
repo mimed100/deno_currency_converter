@@ -6,7 +6,11 @@ There are two different modes for this module
 
 ### 1) Convert Currency with Realtime Data
 ```js
-CODEBLOCK WILL FOLLOW
+import {FiatConverter_fromAPI} from 'https://deno.land/x/currency_converter@v0.3.3/api_mod.ts'
+
+let FiatConverter = new FiatConverter_fromAPI()
+var result = await FiatConverter.convert("12ed855902ddbea5df116639e8e3a1b2",15,"EUR","RUB")
+console.log(result)
 ```
 
 ### 1) Convert Currency with Saved Data from .json file
