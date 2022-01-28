@@ -7,7 +7,7 @@ There are two different modes for this module
 ### 1) Convert Currency with Realtime Data from fixer.io (API-Key required: https://fixer.io/)
 #### Step 1) Import and create a new class
 ```js
-import {FiatConverter_fromAPI} from 'https://deno.land/x/currency_converter@v0.8.0/api_mod.ts'
+import {FiatConverter_fromAPI} from 'https://deno.land/x/currency_converter@v0.9.0/api_mod.ts'
 let FiatConverter = new FiatConverter_fromAPI()
 ```
 #### Step 2) Call the convert() method on created object
@@ -36,7 +36,7 @@ Link: https://fixer.io/
 Link for the data.json file: https://deno.land/x/currency_converter@v0.8.1/data.json
 #### Step 2) Import and create a new class
 ```js
-import {FiatConverter_fromJSON} from 'https://deno.land/x/currency_converter@v0.8.0/json_mod.ts'
+import {FiatConverter_fromJSON} from 'https://deno.land/x/currency_converter@v0.9.0/json_mod.ts'
 let FiatConverter = new FiatConverter_fromJSON()
 ```
 #### Step 3) Call the convert() method on created object
