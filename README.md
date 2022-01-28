@@ -2,9 +2,9 @@
 Deno module to convert fiat money currencies with initial fetched API from fixer.io
 
 ## Usage example
-There are two different modes for this module
+There are two different modes for this module.
 
-### 1) Convert Currency with Realtime Data from fixer.io (API-Key required: https://fixer.io/)
+### Mode 1) Convert Currency with Realtime Data from fixer.io (API-Key required: https://fixer.io/)
 #### Step 1) Import and create a new class
 ```js
 import {FiatConverter_fromAPI} from 'https://deno.land/x/currency_converter@v0.9.0/api_mod.ts'
@@ -22,7 +22,7 @@ console.log(result)
 ```
 #### Step 3) Run the module
 ```js
-deno run --allow-net  test.ts
+deno run --allow-net
 ```
 
 Fixer.io offers 100 free API request calls per month! 
@@ -31,7 +31,7 @@ Link: https://fixer.io/
 
 
 
-### 2) Convert Currency with Saved Data from data.json file
+### Mode 2) Convert Currency with Saved Data from data.json file
 #### Step 1) Create a .json file in the same directory where you run the deno module and name it data.json
 Link for the data.json file: https://deno.land/x/currency_converter@v0.8.1/data.json
 #### Step 2) Import and create a new class
@@ -50,5 +50,5 @@ console.log(result)
 ```
 #### Step 4) Run the module
 ```js
-deno run --allow-net --allow-read  test.ts
+deno run --allow-read
 ```
