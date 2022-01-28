@@ -52,3 +52,9 @@ console.log(result)
 ```js
 deno run --allow-read
 ```
+
+
+## Thank you for the helpful modules that were used in this module!
+### https://deno.land/x/request@1.3.2
+### https://deno.land/x/math@v1.1.0
+
