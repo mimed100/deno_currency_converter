@@ -24,5 +24,3 @@ export class FiatConverter_fromAPI {
         })
     }
 }
-
-
