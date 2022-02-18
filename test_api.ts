@@ -6,7 +6,5 @@ var input_currency = "EUR"
 var output_currency = "USD"
 
 let FiatConverter = new FiatConverter_fromAPI()
-console.log(FiatConverter)
-
 var result = await FiatConverter.convert(api_key, amount, input_currency, output_currency)
-console.log('Result:', result)
+console.log('Result:', result, output_currency)
