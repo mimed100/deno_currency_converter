@@ -1,8 +1,12 @@
-//import json from 'https://deno.land/x/currency_converter@v0.9.2/data.json' assert { type: 'json' };
-//console.log(json)
-//console.log(local json data)
+import {FiatConverter_fromAPI} from 'https://deno.land/x/currency_converter@v0.9.5/api_mod.ts'
 
+const api_key = "12ed855902ddbea5df116639e8e3a1b2"
+var amount = 100
+var input_currency = "EUR"
+var output_currency = "USD"
 
-import {FiatConverter_fromJSON} from "https://deno.land/x/currency_converter@v0.9.2/json_mod.ts"
-let FiatConverter = new FiatConverter_fromJSON()
-console.log(await FiatConverter.convert(15,"EUR","RUB"))
+let FiatConverter = new FiatConverter_fromAPI()
+console.log(FiatConverter)
+
+var result = await FiatConverter.convert(api_key, amount, input_currency, output_currency)
+console.log('Result:', result)

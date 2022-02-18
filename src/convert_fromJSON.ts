@@ -1,3 +1,4 @@
+//import json from 'https://deno.land/x/currency_converter@v0.9.2/data.json' assert { type: 'json' };
 import loadJsonFile from 'https://deno.land/x/load_json_file@v1.0.0/mod.ts'
 import {round} from "https://deno.land/x/math@v1.1.0/mod.ts";
 
