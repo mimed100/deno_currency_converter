@@ -4,7 +4,7 @@ There are two different modes for this module.
 
 ### Mode 1) Convert Currency with Realtime Data from fixer.io (API-Key required: https://fixer.io/)
 ```js
-import {FiatConverter_fromAPI} from 'https://deno.land/x/currency_converter@v0.9.5/api_mod.ts'
+import {FiatConverter_fromAPI} from 'https://deno.land/x/currency_converter@v1.1.0/api_mod.ts'
 const api_key = "12ed855902ddbea5df116639e8e3a1b2"
 var amount = 100
 var input_currency = "EUR"
@@ -16,7 +16,7 @@ console.log('Result:', result, output_currency)
 ```
 #### Test via commandline (provided API-KEY)
 ```js
-deno run --allow-net "https://deno.land/x/currency_converter@v1.0.4/test_api.ts"
+deno run --allow-net "https://deno.land/x/currency_converter@v1.1.0/test_api.ts"
 ```
 #### Output
 ```js
@@ -30,11 +30,11 @@ Link: https://fixer.io/
 ### Mode 2) Convert Currency with copied data from data.json file
 ```js
 // Copy the JSON file into current directory, this file will be used for the currency conversion
-import json from 'https://deno.land/x/currency_converter@v1.0.0/data.json' assert { type: 'json' };
+import json from 'https://deno.land/x/currency_converter@v1.1.0/data.json' assert { type: 'json' };
 const write = Deno.writeTextFile("./data.json", JSON.stringify(json))
 write.then(() => console.log("File written to ./data.json"));
 
-import {FiatConverter_fromJSON} from 'https://deno.land/x/currency_converter@v1.0.0/json_mod.ts'
+import {FiatConverter_fromJSON} from 'https://deno.land/x/currency_converter@v1.1.0/json_mod.ts'
 var amount = 100
 var input_currency = "EUR"
 var output_currency = "USD"
@@ -46,7 +46,7 @@ console.log("Result ", result, output_currency)
 
 #### Test via commandline (provided API-KEY)
 ```js
-deno run --allow-net --allow-write --allow-read "https://deno.land/x/currency_converter@v1.0.0/test_json.ts"
+deno run --allow-net --allow-write --allow-read "https://deno.land/x/currency_converter@v1.1.0/test_json.ts"
 ```
 #### Output
 ```js

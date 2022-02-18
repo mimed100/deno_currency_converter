@@ -1,4 +1,4 @@
-import {FiatConverter_fromAPI} from 'https://deno.land/x/currency_converter@v1.0.0/api_mod.ts'
+import {FiatConverter_fromAPI} from 'https://deno.land/x/currency_converter@v1.1.0/api_mod.ts'
 
 const api_key = "12ed855902ddbea5df116639e8e3a1b2"
 var amount = 100
