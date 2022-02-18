@@ -1,5 +1,5 @@
-import {FiatConverter_fromJSON} from 'https://deno.land/x/currency_converter@v0.9.3/json_mod.ts'
-import json from 'https://deno.land/x/currency_converter@v0.9.3/data.json' assert { type: 'json' };
+import {FiatConverter_fromJSON} from 'https://deno.land/x/currency_converter@v1.0.0/json_mod.ts'
+import json from 'https://deno.land/x/currency_converter@v1.0.0/data.json' assert { type: 'json' };
 console.log(json)
 
 let FiatConverter = new FiatConverter_fromJSON()
