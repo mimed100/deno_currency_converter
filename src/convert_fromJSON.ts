@@ -10,7 +10,7 @@ export class FiatConverter_fromJSON {
         return this.get_data().then(
             ()=>{
                 const result = quantity*(1/this.data.rates[curr_from])*this.data.rates[curr_to]
-            return round(result)
+            return round(result, 2)
             }
         )
     }
