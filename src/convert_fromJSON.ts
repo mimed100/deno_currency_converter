@@ -1,7 +1,3 @@
-import json from 'https://deno.land/x/currency_converter@v1.0.0/data.json' assert { type: 'json' };
-const write = Deno.writeTextFile("./data.json", JSON.stringify(json))
-write.then(() => console.log("File written to ./data.json"));
-
 import loadJsonFile from 'https://deno.land/x/load_json_file@v1.0.0/mod.ts'
 import {round} from "https://deno.land/x/math@v1.1.0/mod.ts";
 
