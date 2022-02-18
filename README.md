@@ -16,7 +16,7 @@ console.log('Result:', result, output_currency)
 ```
 #### Test via commandline (provided API-KEY)
 ```js
-deno run --allow-net "https://deno.land/x/currency_converter@v1.0.0/test_api.ts"
+deno run --allow-net "https://deno.land/x/currency_converter@v1.0.4/test_api.ts"
 ```
 #### Output
 ```js
