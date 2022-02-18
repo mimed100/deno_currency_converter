@@ -17,7 +17,7 @@ console.log('Result:', result, output_currency)
 ```
 #### Test via commandline (provided API-KEY)
 ```js
-deno run --allow-net "https://deno.land/x/currency_converter@v0.9.5/test_api.ts"
+deno run --allow-net "https://deno.land/x/currency_converter@v1.0.0/test_api.ts"
 ```
 #### Output
 ```js
@@ -33,7 +33,7 @@ Link: https://fixer.io/
 Link for the data.json file: https://deno.land/x/currency_converter@v0.8.1/data.json
 #### Step 2) Import and create a new class
 ```js
-import {FiatConverter_fromJSON} from 'https://deno.land/x/currency_converter@v0.9.1/json_mod.ts'
+import {FiatConverter_fromJSON} from 'https://deno.land/x/currency_converter@v1.0.0/json_mod.ts'
 let FiatConverter = new FiatConverter_fromJSON()
 ```
 #### Step 3) Call the convert() method on created object
